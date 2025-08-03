@@ -1,0 +1,240 @@
+/* Resetting default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a3d4a7;
+    color: #333;
+    background-image: linear-gradient(rgba(0, 2, 1, 0.571),rgba(0, 2, 1, 0.907)), url(webImages/botol\ plastik\ estetik\ rectangle.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b;
+    padding: 20px;
+    position: fixed; /* Make header fixed */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    height: 20px; /* Set a fixed height for the header */
+    z-index: 10; /* Keep it on top of other content */
+}
+
+/* Logo styling */
+header .logo h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b2dfdb;
+}
+
+nav ul li a.active {
+    color: #ffeb3b;
+}
+
+
+/* Menu Toggle (3-bar dropdown button) */
+.menu-toggle {
+    display: none; /* Hidden on larger screens */
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: 50%; /* Position the toggle vertically centered */
+    transform: translateY(-50%); /* Center the toggle perfectly */
+    margin-left: auto; /* Align toggle to the right */
+}
+
+/* Register section styling */
+.register-section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #00796b;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: calc(100% - 40px); /* Adjust to fit the icon */
+    padding-right: 40px; /* Space for the icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #00796b;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #004d40;
+}
+
+.confirmation {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.confirmation a {
+    color: #00796b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.confirmation a:hover {
+    color: #004d40;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00796b;
+    color: white;
+    position: fixed; /* Make footer fixed */
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    height: 15px; /* Set a fixed height for the footer */
+    z-index: 10; /* Keep it on top of other content */
+}
+
+/* Media Queries for mobile view */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show menu toggle on mobile */
+    }
+
+    /* Hide the menu initially */
+    nav ul {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #00796b;
+        padding: 10px;
+        position: absolute;
+        top: 100%; /* Position below header */
+        right: 0; /* Align to right */
+        width: auto; /* Take only as much space as needed */
+    }
+
+    /* Show the dropdown when toggle is active */
+    nav ul.show {
+        display: flex;
+    }
+
+    header .logo h1 {
+        font-size: 1.2em;
+    }
+
+    .hero-text h2 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .hero-images {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1em;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-images {
+        flex-direction: column;
+    }
+}

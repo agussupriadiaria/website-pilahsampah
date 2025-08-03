@@ -1,0 +1,15 @@
+KONFIGURASI
+** Jika ingin pindah ke server:
+- Pastikan konfigurasi directory dari file .htaccess juga sudah sesuai
+- Pastikan directory folder untuk penyimpanan data foto sesuai [cek halaman profil.php dan editProfil.php]
+- Pastikan directory di halaman index.php juga sudah sesuai
+- Pastikan directory di halaman campaign untuk file gambarnya sudah sesuai
+- Pastikan halaman directory "uploads" ownernya adalah  ariaxx dan dibuat bisa R,W,E [khusus folder upload saja]
+
+TO DO LIST:
+- Setting css untuk halaman add transaction
+- Buat data file .txt di mesin atm nanti bisa diinput di database
+- Dihalaman transaction tambahin header menu yang sama dengan menu lainnya.
+- verifikasi setiap 2x dalam 1 minggu (senin dan kamis)
+- kalau sudah verifikasi, statusnya complete dan terlihat nominalnya.
+- user bisa mencocokan saldonya dari struk

@@ -1,0 +1,179 @@
+/* Resetting default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a3d4a7;
+    color: #333;
+    background-image: linear-gradient(rgba(0, 2, 1, 0.571), rgba(0, 2, 1, 0.907)), url(/webImages/botol\ plastik\ estetik\ rectangle.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px; /* Add padding to ensure content doesn't go under the header */
+    padding-bottom: 80px; /* Tambahkan padding bawah agar lebih tinggi */
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b;
+    padding: 20px;
+    position: fixed; /* Make header fixed */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    height: 20px; /* Set a fixed height for the header */
+    z-index: 10; /* Keep it on top of other content */
+}
+
+/* Logo styling */
+header .logo h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b2dfdb;
+}
+
+nav ul li a.active {
+    color: #ffeb3b;
+}
+
+/* Menu Toggle (3-bar dropdown button) */
+.menu-toggle {
+    display: none; /* Hidden on larger screens */
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: 50%; /* Position the toggle vertically centered */
+    transform: translateY(-50%); /* Center the toggle perfectly */
+    margin-left: auto; /* Align toggle to the right */
+}
+
+/* Campaign Section Styling */
+.campaign-section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.campaign-container {
+    background-color: rgba(251, 251, 251, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.campaign-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.campaign-card:hover {
+    transform: translateY(-5px);
+}
+
+.campaign-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.campaign-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00796b;
+}
+
+.campaign-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00796b;
+    color: white;
+    position: fixed; /* Make footer fixed */
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    height: 15px; /* Set a fixed height for the footer */
+    z-index: 10; /* Keep it on top of other content */
+}
+
+/* Media Queries for mobile view */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show menu toggle on mobile */
+    }
+
+    /* Hide the menu initially */
+    nav ul {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #00796b;
+        padding: 10px;
+        position: absolute;
+        top: 100%; /* Position below header */
+        right: 0; /* Align to right */
+        width: auto; /* Take only as much space as needed */
+    }
+
+    /* Show the dropdown when toggle is active */
+    nav ul.show {
+        display: flex;
+    }
+
+    header .logo h1 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1em;
+    }
+}

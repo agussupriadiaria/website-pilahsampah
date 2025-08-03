@@ -1,0 +1,228 @@
+/* Resetting default styles */
+body, h1, h2, p, a, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a3d4a7;
+    color: #333;
+    background-image: linear-gradient(rgba(0, 2, 1, 0.571),rgba(0, 2, 1, 0.907));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b;
+    padding: 20px;
+    position: fixed; /* Make header fixed */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    height: 20px; /* Set a fixed height for the header */
+    z-index: 10; /* Keep it on top of other content */
+}
+
+
+/* Logo styling */
+header .logo h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+
+/* Navigation styling */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b2dfdb;
+}
+
+nav ul li a.active {
+    color: #ffeb3b;
+}
+
+/* Menu Toggle (3-bar dropdown button) */
+.menu-toggle {
+    display: none; /* Hidden on larger screens */
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: 50%; /* Position the toggle vertically centered */
+    transform: translateY(-50%); /* Center the toggle perfectly */
+    margin-left: auto; /* Align toggle to the right */
+}
+
+/* Register section styling (input section) */
+.input-section {
+    /* margin-top: 60px; */
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    /* max-width: 400px; */
+    /* width: 100%; */
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #00796b;
+}
+
+.container p {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* CSS untuk back button */
+.profile-button,.transaction-button {
+    display: inline-block;
+    text-align: center;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #5e645ff9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.profile-button:hover,.transaction-button:hover {
+    background-color: #45a049;
+}
+
+
+/* CSS untuk form agar tombol submit rata tengah */
+.input-section form {
+    text-align: center;
+}
+
+/* Tambahkan ini ke CSS Anda */
+input[type="submit"] {
+    margin-top: 20px; /* Atur jarak atas sesuai kebutuhan */
+}
+
+.data-berhasil{
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+}
+
+.label-code {
+    display: block;
+    /* margin-bottom: 20px; */
+}
+
+.label-date {
+    display: block;
+    margin-top: 20px; /* Atur jarak atas antara .label-code dan .label-date */
+}
+
+#error-message {
+    /* color: red; 
+    display: none;  */
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00796b;
+    color: white;
+    position: fixed; /* Make footer fixed */
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    height: 15px; /* Set a fixed height for the footer */
+    z-index: 10; /* Keep it on top of other content */
+}
+
+
+/* Media Queries for mobile view */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show menu toggle on mobile */
+    }
+
+    /* Hide the menu initially */
+    nav ul {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #00796b;
+        padding: 10px;
+        position: absolute;
+        top: 100%; /* Position below header */
+        right: 0; /* Align to right */
+        width: auto; /* Take only as much space as needed */
+    }
+
+    /* Show the dropdown when toggle is active */
+    nav ul.show {
+        display: flex;
+    }
+
+    header .logo h1 {
+        font-size: 1.2em;
+    }
+
+    .hero-text h2 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .hero-images {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1em;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-images {
+        flex-direction: column;
+    }
+}

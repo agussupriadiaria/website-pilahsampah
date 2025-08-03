@@ -1,0 +1,224 @@
+/* Resetting default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a3d4a7;
+    color: #333;
+    background-color:rgb(42, 59, 46) ;
+    /* background-image: linear-gradient(rgba(0, 2, 1, 0.571), rgba(0, 2, 1, 0.907)), url(webImages/botol\ plastik\ estetik\ rectangle.jpeg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh; /* Mengisi penuh layar */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Agar footer tetap di bagian bawah */
+    padding: 20px; /* Padding tetap agar nyaman di berbagai ukuran layar */
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b;
+    padding: 20px;
+    position: fixed; /* Make header fixed */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    z-index: 10; /* Keep it on top of other content */
+}
+
+header .logo h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b2dfdb;
+}
+
+nav ul li a.active {
+    color: #ffeb3b;
+}
+
+/* Menu Toggle (3-bar dropdown button) */
+.menu-toggle {
+    display: none; /* Hidden on larger screens */
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: 50%; /* Position the toggle vertically centered */
+    transform: translateY(-50%); /* Center the toggle perfectly */
+    margin-left: auto; /* Align toggle to the right */
+}
+
+/* Profile header styling */
+.profile-header {
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00796b;
+}
+
+.profile-header h1 {
+    font-size: 1.2em;
+    margin-top: 8px;
+}
+
+/* Profile container styling */
+.profile-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 80%;
+    text-align: center;
+    margin: 100px auto; /* Adjust to center vertically and horizontally */
+    flex-grow: 1; /* Makes sure the profile container grows to take up available space */
+}
+
+/* Profile details styling */
+.profile-details {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    margin-bottom: 10px;
+}
+
+.detail-item strong {
+    display: block;
+    color: #00796b;
+    margin-bottom: 5px;
+}
+
+.detail-item p {
+    margin: 0;
+    color: #333;
+}
+
+.balance {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #004d40;
+}
+
+/* Tombol umum styling */
+.btn-transaction,
+.btn-edit {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn-transaction:hover {
+    background-color: #004d40;
+}
+
+.btn-edit {
+    background-color: #636604;
+}
+
+.btn-edit:hover {
+    background-color: #843806;
+}
+.btn-transaction,
+.btn-edit {
+    margin: 10px 5px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00796b;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Media Queries for mobile view */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #00796b;
+        padding: 10px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: auto;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    header .logo h1 {
+        font-size: 1.2em;
+    }
+
+    .profile-container {
+        margin-top: 120px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1em;
+    }
+
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-header h1 {
+        font-size: 1em;
+    }
+}
