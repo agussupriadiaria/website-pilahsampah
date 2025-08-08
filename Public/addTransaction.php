@@ -126,7 +126,7 @@
         <p>Silakan tambahkan kode unik [transactioncode] di kolom yang tersedia.</p>
 
         <a href="profile" class="profile-button" title="Back to profile"> &#8592; Profile</a>
-        <a href="transaction" class="transaction-button" title="Back to transaction"> &#8592; Transactions</a>
+        <a href="transaction-verify" class="transaction-button" title="Back to transaction"> &#8592; Transactions</a>
 
         <form method="POST" action="">
             <label for="transactioncode" class="label-code">Transaction code:</label>

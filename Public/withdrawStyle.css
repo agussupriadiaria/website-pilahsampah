@@ -58,7 +58,7 @@ nav ul li a:hover {
     color: #b2dfdb;
 }
 
-nav ul li a.active {
+.active {
     color: #ffeb3b;
 }
 
@@ -174,7 +174,7 @@ footer {
     }
 
     /* Show the dropdown when toggle is active */
-    nav ul.show {
+    .show {
         display: flex;
     }
 

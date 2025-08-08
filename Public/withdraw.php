@@ -151,7 +151,7 @@
             <p>3. Proses Withdraw bisa ditunggu selama 2 hari kerja.</p>
             <p>4. Minimum withdraw adalah Rp 10.000.</p>
             <p>5. Silakan hubungi tim CS kami jika ada kendala.</p>
-            <a href="transaction" class="back-button" title="Back to transaction"> &#8592; Transactions</a>
+            <a href="transaction-verify" class="back-button" title="Back to transaction"> &#8592; Transactions</a>
             <form method="POST" action="">
                 <label for="amount" class="label-amount">Jumlah Penarikan (Rp):</label>
                 <input type="number" name="amount" id="amount" required min="10000"><br>
