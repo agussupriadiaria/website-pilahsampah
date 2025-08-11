@@ -3,12 +3,13 @@ buatkan query agar saya bisa mengambil data dari tabel
 - meta_key, dengan value: number-1, date-1, hidden-1, hidden-2, hidden-3
 - meta_value
 - entry_id
-agar bisa saya masukkan datanya ke tabel transactions dan table transactions_wd
-detailnya sebagai berikut:
-> dari table wp_frmt_form_entry_meta, dengan meta_key
+agar bisa saya masukkan datanya ke tabel transactions dan table transactions_wd.
 
-> transactions, dengan kolom:
-- user_id, dari hidden-1
-- user_name, dari hidden-2
-- amount, dari number-1
-- 
+Logic data yang dipindah ke table transactions:
+> dari table wp_frmt_form_entry_meta, meta_key 'hidden-3', yang meta_valuenya 'Transactions', datanya dipindah ke table transactions, dengan grouping datanya berdasarkan entry_id. detailnya:
+> table transactions, dengan kolom:
+- user_id, diinput dari hidden-1
+- user_name, diinput dari hidden-2
+- transactioncode, diinput dari number-1
+
+Logic data yang dipindah ke table transactions_wd:
