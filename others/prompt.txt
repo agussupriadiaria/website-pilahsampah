@@ -1,0 +1,14 @@
+buatkan query agar saya bisa mengambil data dari tabel
+> wp_frmt_form_entry_meta, kolom:
+- meta_key, dengan value: number-1, date-1, hidden-1, hidden-2, hidden-3
+- meta_value
+- entry_id
+agar bisa saya masukkan datanya ke tabel transactions dan table transactions_wd
+detailnya sebagai berikut:
+> dari table wp_frmt_form_entry_meta, dengan meta_key
+
+> transactions, dengan kolom:
+- user_id, dari hidden-1
+- user_name, dari hidden-2
+- amount, dari number-1
+- 
