@@ -60,6 +60,7 @@ $profile_pic = "webImages/defaultProfile.jpeg"; // default image
             <li><a href="about" class="menu-link">About</a></li>
             <li><a href="contact" class="menu-link">Contact</a></li>
             <li><a href="logout" class="menu-link">Logout</a></li>
+            <li><a href="/wp/transactions" class="menu-link">wp</a></li>
         </ul>
     </nav>
 </header>
