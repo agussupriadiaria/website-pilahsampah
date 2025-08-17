@@ -1,0 +1,37 @@
+# to use it, change file name to .httaccess
+
+RewriteEngine On
+
+# Mencegah listing direktori
+Options -Indexes
+
+# Menulis URL agar tidak tertampil ekstensi halaman .php atau .html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L,QSA]
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.html [L,QSA]
+RewriteRule ^$ index.php [L,QSA]
+
+# Menulis URL agar tidak tertampil ekstensi halaman .php atau .html [level Subfolder]
+RewriteRule ^others/([a-zA-Z0-9_-]+)$ others/$1.php [L,QSA]
+RewriteRule ^others/([a-zA-Z0-9_-]+)$ others/$1.html [L,QSA]
+RewriteRule ^others/?$ others/index.php [L,QSA]
+
+php_flag display_errors On
+php_value error_reporting E_ALL
+
+Options All -Indexes
+
+
+
+# # CODE TAMBAHAN, MEMBUAT DEFAULT FOLDER UNTUK WEBSITE SENDIRI
+# RewriteEngine On
+# RewriteCond %{REQUEST_URI} !^../atmsampah/
+# RewriteRule ^(.*)$ ../atmsampah/$1 [L]
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW HOTLINKID:7aFeAL7cKx
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?pilahsampah.com/.*$      [NC]
+#RewriteRule .*\.(.*|jpg|jpeg|gif|png|bmp|tiff|avi|mpeg|mpg|wma|mov|zip|rar|exe|mp3|pdf|swf|psd|txt|html|htm|php)$ https://pilahsampah.com [R,NC]
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE 7aFeAL7cKx:HOTLINKID
+
